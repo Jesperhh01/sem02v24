@@ -1,0 +1,229 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2759
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red239\green239\blue239;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c94902\c94902\c94902;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww13140\viewh10620\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 \cb2 \expnd0\expndtw0\kerning0
+FROM ubuntu:24.04\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 RUN apt-get update \\\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 && apt-get dist-upgrade\
+ \
+-y \\\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 && apt-get autoremove -y \\\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 && apt-get autoclean -y\
+ \
+\\\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 && apt-get install -y \\\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 sudo \\\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 nano \\\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 wget \\\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 curl \\\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 git\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 RUN useradd -G sudo -m -d /home/JESPER -s /bin/bash\
+ \
+-p "$(openssl\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 passwd -1 pannekake)\'94\
+ \
+JESPER\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 USER JESPER\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 WORKDIR /home/JESPER\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 RUN mkdir hacking \\\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 && cd hacking \\\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 && curl -SL\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 https://raw.githubusercontent.com/uia-worker/is105misc/master/sem01v2\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 4/pawned.sh > pawned.sh \\\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 && chmod 764 pawned.sh \\\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 && cd ..\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 RUN git config --global user.email \'93jesp01@outlook.com\'94\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 \\\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 && git config --global user.name \'93Jesperhh01\'93 \\\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 && git config --global url."https://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:@github.com/".insteadOf\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 "https://github.com" \\\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 && mkdir -p github.com/GITHUB-Jesperhh01\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 USER root\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 RUN curl -SL https://go.dev/dl/go1.21.7.OS-ARCH.tar.gz \\\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 | tar xvz -C /usr/local\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 USER JESPER\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 SHELL ["/bin/bash", "-c"]\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 RUN mkdir -p $HOME/go/\{src,bin\}\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 ENV GOPATH="/home/JESPER/go"\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 ENV PATH="$\{PATH\}:$\{GOPATH\}/bin:/usr/local/go/bin"\
+}

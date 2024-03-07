@@ -1,0 +1,229 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2759
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red239\green239\blue239;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c94902\c94902\c94902;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 \cb2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 FROM ubuntu:24.04\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 RUN apt-get update \\\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 && apt-get dist-upgrade\strokec0 \
+\strokec3  \strokec0 \
+\strokec3 -y \\\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 && apt-get autoremove -y \\\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 && apt-get autoclean -y\strokec0 \
+\strokec3  \strokec0 \
+\strokec3 \\\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 && apt-get install -y \\\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 sudo \\\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 nano \\\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 wget \\\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 curl \\\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 git\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 RUN useradd -G sudo -m -d /home/BRUKER -s /bin/bash\strokec0 \
+\strokec3  \strokec0 \
+\strokec3 -p "$(openssl\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 passwd -1 PASSWD)"\strokec0 \
+\strokec3  \strokec0 \
+\strokec3 BRUKER\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 USER BRUKER\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 WORKDIR /home/BRUKER\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 RUN mkdir hacking \\\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 && cd hacking \\\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 && curl -SL\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 https://raw.githubusercontent.com/uia-worker/is105misc/master/sem01v2\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 4/pawned.sh > pawned.sh \\\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 && chmod 764 pawned.sh \\\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 && cd ..\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 RUN git config --global user.email "EPOSTADRESSE-GITHUB-REGISTRERING"\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 \\\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 && git config --global user.name "DITT-NAVN" \\\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 && git config --global url."https://PAT:@github.com/".insteadOf\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 "https://github.com" \\\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 && mkdir -p github.com/GITHUB-BRUKERNAVN\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 USER root\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 RUN curl -SL https://go.dev/dl/go1.21.7.OS-ARCH.tar.gz \\\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 | tar xvz -C /usr/local\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 USER BRUKER\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 SHELL ["/bin/bash", "-c"]\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 RUN mkdir -p $HOME/go/\{src,bin\}\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 ENV GOPATH="/home/BRUKER/go"\strokec0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf0 \strokec3 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs30 \cf0 ENV PATH="$\{PATH\}:$\{GOPATH\}/bin:/usr/local/go/bin"\strokec0 \
+}
